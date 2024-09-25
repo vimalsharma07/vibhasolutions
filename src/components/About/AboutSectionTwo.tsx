@@ -31,7 +31,11 @@ const AboutSectionTwo = () => {
                   Custom Software Solutions
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  At Vibha Solutions, we craft custom software solutions that are tailored to meet the unique needs of your business. Whether you're looking for robust web applications, mobile solutions, or enterprise-grade software, we ensure seamless integration and high performance.
+                  At Vibha Solutions, we craft custom software solutions that
+                  are tailored to meet the unique needs of your business.
+                  Whether you&#39;re looking for robust web applications, mobile
+                  solutions, or enterprise-grade software, we ensure seamless
+                  integration and high performance.
                 </p>
               </div>
               <div className="mb-9">
@@ -39,7 +43,10 @@ const AboutSectionTwo = () => {
                   Dedicated Support
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Our dedicated support team ensures that your software is always running smoothly. From initial deployment to long-term maintenance, Vibha Solutions is with you every step of the way, offering timely assistance and expert guidance.
+                  Our dedicated support team ensures that your software is
+                  always running smoothly. From initial deployment to long-term
+                  maintenance, Vibha Solutions is with you every step of the
+                  way, offering timely assistance and expert guidance.
                 </p>
               </div>
               <div className="mb-1">
@@ -47,7 +54,10 @@ const AboutSectionTwo = () => {
                   Powered by Next.js
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Vibha Solutions leverages Next.js to deliver fast, scalable, and modern web applications that provide exceptional user experiences. Our team ensures that your software is built using the latest technologies for optimal performance.
+                  Vibha Solutions leverages Next.js to deliver fast, scalable,
+                  and modern web applications that provide exceptional user
+                  experiences. Our team ensures that your software is built
+                  using the latest technologies for optimal performance.
                 </p>
               </div>
             </div>
