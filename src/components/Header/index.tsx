@@ -7,13 +7,11 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
-  // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
 
-  // Sticky Navbar
   const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
@@ -29,7 +27,6 @@ const Header = () => {
     };
   }, []);
 
-  // Submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index) => {
     setOpenIndex(openIndex === index ? -1 : index);
@@ -156,22 +153,14 @@ const Header = () => {
                 </ul>
               </nav>
             </div>
-            <div className="flex items-center justify-end pr-16 lg:pr-0">
+            <div className="flex items-center justify-end pr-4 lg:pr-0">
+              <ThemeToggler />
               <Link
-                href="/signin"
-                className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
+                href="#"
+                className="header-btn hidden rounded-md px-4 py-2.5 text-base font-medium text-white transition hover:bg-opacity-80 dark:bg-primary dark:hover:bg-opacity-90 lg:block"
               >
-                Sign In
+                Connect Wallet
               </Link>
-              <Link
-                href="/signup"
-                className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
-              >
-                Sign Up
-              </Link>
-              <div>
-                <ThemeToggler />
-              </div>
             </div>
           </div>
         </div>
