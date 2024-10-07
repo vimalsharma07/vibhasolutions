@@ -2,13 +2,20 @@ import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
   try {
+
+    console.log('SMTP Config:', {
+      host: process.env.MAIL_HOST,
+      port: process.env.MAIL_PORT,
+      user: process.env.MAIL_USERNAME,
+    });
+    
     if (req.method === 'POST') {
       const { name, email, message } = req.body;
 
       const transporter = nodemailer.createTransport({
         host: process.env.MAIL_HOST,
         port: Number(process.env.MAIL_PORT),
-        secure: process.env.MAIL_ENCRYPTION === 'ssl',
+        secure: false,
         auth: {
           user: process.env.MAIL_USERNAME,
           pass: process.env.MAIL_PASSWORD,
@@ -28,8 +35,11 @@ export default async function handler(req, res) {
       res.setHeader('Allow', ['POST']);
       res.status(405).end(`Method ${req.method} Not Allowed`);
     }
-  } catch (error) {
-    console.error('Error in sendEmail API:', error);
-    res.status(500).json({ message: 'Internal Server Error', error: error.message });
+  } 
+  catch (error) {
+    console.error('Error sending email:', error);
+    console.error('Full error details:', error.stack); // Log the full error stack for debugging
+    res.status(500).json({ message: 'Error sending email', error: error.message });
   }
+  
 }
