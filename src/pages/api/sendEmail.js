@@ -5,6 +5,11 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { name, email, message } = req.body;
 
+    // Check if required fields are provided
+    if (!name || !email || !message) {
+      return res.status(400).json({ message: 'Name, email, and message are required.' });
+    }
+
     // Create a transporter using your SMTP settings from environment variables
     const transporter = nodemailer.createTransport({
       host: process.env.MAIL_HOST,
@@ -14,6 +19,10 @@ export default async function handler(req, res) {
         user: process.env.MAIL_USERNAME,
         pass: process.env.MAIL_PASSWORD,
       },
+      // Uncomment the following lines if you're having SSL issues with self-signed certificates
+      // tls: {
+      //   rejectUnauthorized: false,  // Use cautiously: not recommended for production
+      // },
     });
 
     // Define the email options
