@@ -64,9 +64,9 @@ const Header = () => {
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="/images/logo/logo.png"
                   alt="logo"
-                  width={140}
+                  width={100}
                   height={30}
                   className="hidden w-full dark:block"
                 />
@@ -158,7 +158,7 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
+              {/* <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/signin"
                   className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
@@ -174,7 +174,7 @@ const Header = () => {
                 <div>
                   <ThemeToggler />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
