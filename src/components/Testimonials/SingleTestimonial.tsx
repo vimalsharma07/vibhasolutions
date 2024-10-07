@@ -9,14 +9,17 @@ const starIcon = (
 const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
   const { star, name, image, content, designation } = testimonial;
 
-  let ratingIcons = [];
-  for (let index = 0; index < star; index++) {
-    ratingIcons.push(
-      <span key={index} className="text-yellow">
-        {starIcon}
-      </span>,
-    );
-  }
+ // Explicitly typing ratingIcons as an array of JSX elements
+const ratingIcons: JSX.Element[] = [];
+
+for (let index = 0; index < star; index++) {
+  ratingIcons.push(
+    <span key={index} className="text-yellow">
+      {starIcon}
+    </span>,
+  );
+}
+
 
   return (
     <div className="w-full">
