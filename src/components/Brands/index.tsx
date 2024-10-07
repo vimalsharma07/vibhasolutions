@@ -33,9 +33,25 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
         rel="nofollow noreferrer"
         className="relative h-10 w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
       >
-        <Image src={imageLight} alt={name} fill className="hidden dark:block" />
-        <Image src={image} alt={name} fill className="block dark:hidden" />
+        {/* Only render the Image component if the src is defined */}
+        {imageLight && (
+          <Image
+            src={imageLight}
+            alt={name || "Brand Image"} // Fallback alt text
+            fill
+            className="hidden dark:block"
+          />
+        )}
+        {image && (
+          <Image
+            src={image}
+            alt={name || "Brand Image"} // Fallback alt text
+            fill
+            className="block dark:hidden"
+          />
+        )}
       </a>
     </div>
   );
 };
+
