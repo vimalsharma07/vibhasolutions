@@ -5,11 +5,6 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
       const { name, email, message } = req.body;
 
-      // Check if required fields are present
-      if (!name || !email || !message) {
-        return res.status(400).json({ message: 'Name, email, and message are required.' });
-      }
-
       // Create a transporter using your SMTP settings from environment variables
       const transporter = nodemailer.createTransport({
         host: process.env.MAIL_HOST,
@@ -37,7 +32,7 @@ export default async function handler(req, res) {
       res.status(405).end(`Method ${req.method} Not Allowed`);
     }
   } catch (error) {
-    console.error('Error in sendEmail API:', error); // Detailed logging
+    console.error('Error in sendEmail API:', error);
     res.status(500).json({ message: 'Internal Server Error', error: error.message });
   }
 }
