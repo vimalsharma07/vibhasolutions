@@ -9,7 +9,7 @@ const Features = () => {
         <div className="container">
           <SectionTitle
             title="Main Features"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            paragraph="We are a web development company currently located in Noida UttarPardesh . Currently we building ERP, CRM, Dynamic websites, static websites, Ecommerce websites, Digital Marketing"
             center
           />
 

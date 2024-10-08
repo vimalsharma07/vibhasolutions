@@ -6,13 +6,14 @@ const PricingBox = (props: {
   children: React.ReactNode;
 }) => {
   const { price, duration, packageName, subtitle, children } = props;
+  
 
   return (
     <div className="w-full">
       <div className="relative z-10 rounded-sm bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark">
         <div className="flex items-center justify-between">
           <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
-            $<span className="amount">{price}</span>
+            <span className="amount">{price}</span>
             <span className="time text-lg font-medium text-body-color">
               /{duration}
             </span>
@@ -21,11 +22,26 @@ const PricingBox = (props: {
             {packageName}
           </h4>
         </div>
+       
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-          <button className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-            Start Free Trial
-          </button>
+        <button
+                className="flex w-full items-center justify-center rounded-sm bg-green-500 p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-green-600 hover:shadow-signUp"
+                onClick={() => {
+                  window.open(
+                   `https://wa.me/9368311855?text=Hello, I would like to know more about ${props.packageName}`
+
+                  );
+                }}
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                  alt="WhatsApp"
+                  className="mr-2 h-5 w-5"
+                />
+                Contact via WhatsApp
+              </button>
+
         </div>
         <div>{children}</div>
         <div className="absolute bottom-0 right-0 z-[-1]">

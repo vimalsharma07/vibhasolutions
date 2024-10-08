@@ -11,8 +11,8 @@ const Pricing = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Website Development Pricing"
+          paragraph="Choose the best option for your business needs. Whether you need a static website, dynamic website, or a full-fledged e-commerce site, we've got you covered."
           center
           width="665px"
         />
@@ -59,43 +59,43 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Static Website"
+            price={isMonthly ? "₹4999" : "₹4999"}
+            duration={isMonthly ? "" : ""}
+            subtitle="Ideal for showcasing your business with minimal updates."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Up to 5 Pages" status="active" />
+            <OfferList text="Responsive Design" status="active" />
+            <OfferList text="Basic SEO Optimization" status="active" />
+            <OfferList text="Contact Form Integration" status="active" />
+            <OfferList text="Hosting Not Included" status="inactive" />
+            <OfferList text="No CMS Integration" status="inactive" />
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Dynamic Website"
+            price={isMonthly ? "₹9999" : "₹9999"}
+            duration={isMonthly ? "" : "yr"}
+            subtitle="Perfect for businesses requiring frequent updates and dynamic content."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Up to 10 Pages" status="active" />
+            <OfferList text="Content Management System" status="active" />
+            <OfferList text="Advanced SEO Optimization" status="active" />
+            <OfferList text="Blog Integration" status="active" />
+            <OfferList text="Custom Functionalities" status="active" />
+            <OfferList text="24/7 Support" status="inactive" />
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="E-commerce Website"
+            price={isMonthly ? "₹14999" : "₹14999"}
+            duration={isMonthly ? "" : "yr"}
+            subtitle="Best solution for online stores with payment integration and product management."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="Unlimited Products" status="active" />
+            <OfferList text="Payment Gateway Integration" status="active" />
+            <OfferList text="Product Management System" status="active" />
+            <OfferList text="Shopping Cart Functionality" status="active" />
+            <OfferList text="Inventory Management" status="active" />
+            <OfferList text="Free Maintenance for 6 months" status="inactive" />
           </PricingBox>
         </div>
       </div>

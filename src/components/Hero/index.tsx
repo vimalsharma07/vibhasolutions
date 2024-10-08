@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 const Hero = () => {
@@ -25,12 +26,23 @@ const Hero = () => {
                   >
                     🔥 Get Pro
                   </Link>
-                  <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                  >
-                    Star on GitHub
-                  </Link>
+                  <button
+                className="flex w-30 items-center justify-center rounded-sm bg-green-500 p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-green-600 hover:shadow-signUp"
+                onClick={() => {
+                  window.open(
+                   `https://wa.me/9368311855?text=Hello, I would like to know more about development`
+
+                  );
+                }}
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                  alt="WhatsApp"
+                  className="mr-2 h-5 w-5"
+                />
+                Contact via WhatsApp
+              </button>
+
                 </div>
               </div>
             </div>
